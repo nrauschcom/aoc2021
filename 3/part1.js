@@ -1,0 +1,1 @@
+((b,f)=>(k=parseInt(b.reduce((a,r)=>(r.split('').forEach((n,i)=>a[i]+=(n=='1')),a),new Array(f.length).fill(0)).map(i=>i>b.length/2?1:0).join(''),2),k*(Math.pow(2,f.length)-k-1)))(a=document.body.innerText.split('\n'),a[0])

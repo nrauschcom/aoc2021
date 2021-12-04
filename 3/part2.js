@@ -1,0 +1,1 @@
+((b)=>Math.imul(...[...b[0]].reduce((r,_,i)=>r.map((s,p)=>(c=-s.reduce((a,r)=>a-r[i],0)/s.length,f=s.filter(r=>r[i]==(c>=0.5)^p),f[0]?f:s)),[b,[...b]]).map(i=>parseInt(i,2))))(document.body.innerText.split(/\n(?!$)/))
