@@ -1,0 +1,1 @@
+((a,l,p)=>(b=Array(1000000).fill(0),a.map(r=>l(r).forEach(c=>b[p(c)]++)),b.reduce((a,i)=>a+(i>1))))([...document.body.innerText.matchAll(/(\d+),(\d+).{4}(\d+),(\d+)/g)].map(r=>r.map(i=>parseInt(i))),r=>(a=i=>i>0?i:-i,s=Math.sign,x=r[3]-r[1],y=r[4]-r[2],(a(x)-a(y))?[...Array(1+(a(x)||a(y)))].map((_,i)=>([r[1]+s(x)*i,r[2]+s(y)*i])):[]),p=>1000*p[1]+p[0])
