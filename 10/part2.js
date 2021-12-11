@@ -1,0 +1,1 @@
+(o={'[':']','(':')','{':'}','<':'>'},p={'(':1,'[':2,'{':3,'<':4},(R=document.body.innerText.split(/\n(?!$)/).flatMap(r=>(s=[],k=0,[...r.trim()].some(c=>(c in o)?!s.unshift(c):c!=o[s.shift()])?[]:[s.reduce((a,c)=>a*5+p[c],0)])).sort((a,b)=>b-a))[(R.length-1)/2])
