@@ -1,0 +1,1 @@
+(i=0,m=document.body.innerText.split('\n').flatMap(r=>[...r].map(Number)),I=(i,a=1)=>(!m[i]||(m[i]+=a)>9&&(m[i]=0,I(i-10),I(i+10),i%10==9||(I(i+1),I(i-9),I(i+11)),i%10&&(I(i-1),I(i-11),I(i+9)),0)),t=_=>(++i,m.map((n,p)=>m[p]=n+1).some((n,p)=>(I(p,0),0)),m.every(c=>c==0)||t()),t(),i)
