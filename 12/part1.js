@@ -1,0 +1,1 @@
+(p=document.body.innerText.split('\n').reduce((a,r)=>(s=r.split('-'),(a[s[0]]??=[]).push(s[1]),(a[s[1]]??=[]).push(s[0]),a),{}),U=(s)=>s.match(/[A-Z]/),v=(n,t)=>(p[n]?.flatMap(N=>(N=='end'?[['end',n,...t]]:((U(N)||!t.includes(N))?v(N,[n,...t]):[]))??[])),v('start',[]).length)
