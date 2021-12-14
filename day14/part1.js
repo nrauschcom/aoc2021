@@ -1,0 +1,1 @@
+(i=document.body.innerText.split('\n\n'),m=Object.fromEntries([...i[1].matchAll(/(\w+)\W+(\w)/g)]?.map(m=>([m[1],m[1][0]+m[2]+m[1][1]]))),R=Array(10).fill(0).reduce(a=>([...a].map((c,i)=>(r=m[l=a.substr(i,2)]??l,i?r.substr(1):r)).join('')),i[0]),(C=Object.values([...R].reduce((a,c)=>(a[c]=(a[c]??0)+1,a),{})).sort((a,b)=>b-a))[0]-C[C.length-1])
