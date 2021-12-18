@@ -1,0 +1,1 @@
+(t=$("pre").innerText.match(/(-?\d+).+?(-?\d+).+?(-?\d+).+?(-?\d+)/).map(Number),m=Math.sqrt(t[2]*2)|0,s=(X,Y,x=0,y=0)=>(x=x+X,y=y+Y,h=y>h?y:h,x>=t[1]&&y<=t[4]?(x<=t[2]&&y>=t[3]?1:0):s(Math.max(X-1,0),Y-1,x,y)),X=(t[2]-m)+1,Y=-t[3]+1,Array(X*Y*2).fill(0).reduce((a,i,c)=>(x=m+(c/Y/2)|0,y=c%(Y*2)-Y,s(x,y)+a),0))
